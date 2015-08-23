@@ -15,12 +15,12 @@ function Board() {
 	this.grid = [];
 	// loop to add square objects to grid to make board
 
-	for (var i = 0; i < 3; i++)
+	for (var i = 0; i < 16; i++)
 	{
 		// first pass: row
 		this.grid.push([]);
 
-		for (var j = 0; j < 3; j++) {
+		for (var j = 0; j < 16; j++) {
 			// second pass: columns
 			this.grid[i].push(new Square());
 		}
