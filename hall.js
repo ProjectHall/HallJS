@@ -8,6 +8,12 @@
 function Square(x,y) {
 	this.x = x;
 	this.y = y;
+	this.type; // Is it a wallPart or a moveSquare?
+}
+
+// Wall object that takes squares
+function Wall(square) {
+	// Three continguous wallParts
 }
 
 // Make Board Class
@@ -28,19 +34,29 @@ function Board() {
 	}
 }
 
-function Game() {
+function RulesEngine() {
 	// Method that checks for type of square (move or wall)
 	this.squareChecker = function(square) {
 			if (square.x % 2 === 0 && square.y % 2 === 0) {
-			console.log("This is a moveSquare"); // note, this is a great way to test stuff in JS
+			console.log("This is a moveSquare"); // note, console.log() is a great way to test stuff in JS
 		} else {
-			console.log("this is a wallSquare");
+			console.log("this is a wallSquare part");
 		}
 	};
+
+	// Method: to check if a player is illegally blocked based on a wall placement
+
+	// Method: Wall collision checker
+
+	// Method: Pawn collision detection checker
+
+	// Method: Pawn cant move because of other pawn, needs diag move
 	
+	// Method: to check if player has won
+
 	// whose turn it is
 
-	// method verifies you're playing by the rules
+	// Method: verifies you're playing by the rules
 }
 
 function Player() {
