@@ -25,6 +25,16 @@ function Player() {
 		} while (i <= 2);
 			
 	};
+
+	// place a horizontal wall
+	this.placeWallHorizontal = function(x,y) {
+		var i = 0;
+		do {
+			board.grid[x][y+i].wallOn = 1;
+			i = i + 1;
+		} while (i <= 2);
+			
+	};
 }
 
 // NOTE: these are function objects until constructed
