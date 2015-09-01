@@ -15,15 +15,16 @@ function Wall(square) {
 	// Three continguous wallParts
 }
 
+// for dev purposes, making a 4 by 4 board to start
 function Board() {
 	// array of square objects
 	this.grid = [];
 	// loop to add square objects to grid to make board
-	for (var i = 0; i < 16; i++)
+	for (var i = 0; i < 4; i++)
 	{
 		// first pass: rows
 		this.grid.push([]);
-		for (var j = 0; j < 16; j++) {
+		for (var j = 0; j < 4; j++) {
 			// second pass: columns
 			this.grid[i].push(new Square(i,j)); // Constrcuts square objects
 												// with x,y coordinates
