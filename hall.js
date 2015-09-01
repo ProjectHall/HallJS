@@ -4,32 +4,29 @@
  * v1.0
  ********************************/
 
-// Make Square Class
+// NOTE: these are function objects until constructed
 function Square(x,y) {
 	this.x = x;
 	this.y = y;
 	this.type; // Is it a wallPart or a moveSquare?
 }
 
-// Wall object that takes squares
 function Wall(square) {
 	// Three continguous wallParts
 }
 
-// Make Board Class
 function Board() {
 	// array of square objects
 	this.grid = [];
 	// loop to add square objects to grid to make board
-
 	for (var i = 0; i < 16; i++)
 	{
-		// first pass: row
+		// first pass: rows
 		this.grid.push([]);
-
 		for (var j = 0; j < 16; j++) {
 			// second pass: columns
-			this.grid[i].push(new Square(i,j)); // Gives your square object x,y coordinates
+			this.grid[i].push(new Square(i,j)); // Constrcuts square objects
+												// with x,y coordinates
 		}
 	}
 }
@@ -37,12 +34,15 @@ function Board() {
 function RulesEngine() {
 	// Method that checks for type of square (move or wall)
 	this.squareChecker = function(square) {
-			if (square.x % 2 === 0 && square.y % 2 === 0) {
-			console.log("This is a moveSquare"); // note, console.log() is a great way to test stuff in JS
+		if (square.x % 2 === 0 && square.y % 2 === 0) {
+			console.log("This is a moveSquare");
 		} else {
 			console.log("this is a wallSquare part");
-		}
-	};
+		};
+
+	/*********
+	 * To Dos
+	 *********/
 
 	// Method: to check if a player is illegally blocked based on a wall placement
 
