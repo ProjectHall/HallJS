@@ -4,15 +4,35 @@
  * v1.0
  ********************************/
 
+function Game() {
+	// promt
+	console.log("Neo...wake up");
+	console.log("A small matrix to place your wall?")
+	console.log("Use <number>,<number> to enter your selection");
+
+	// set up the game
+	var board = new Board();
+	var player = new Player();
+}
+
+function Player() {
+	// place a vertical wall
+	this.placeWallVert = function(x,y) {
+		var i = 0;
+		do {
+			board.grid[x+i][y].wallOn = 1;
+			i = i + 1;
+		} while (i <= 2);
+			
+	};
+}
+
 // NOTE: these are function objects until constructed
 function Square(x,y) {
 	this.x = x;
 	this.y = y;
-	this.type; // Is it a wallPart or a moveSquare?
-}
-
-function Wall(square) {
-	// Three continguous wallParts
+	this.wallOn = 0;
+	this.pieceOn = 0;
 }
 
 // for dev purposes, making a 4 by 4 board to start
@@ -61,6 +81,3 @@ function RulesEngine() {
 	// Method: verifies you're playing by the rules
 }
 
-function Player() {
-
-}
