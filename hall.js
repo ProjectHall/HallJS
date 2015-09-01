@@ -7,7 +7,7 @@
 function Game() {
 	// promt
 	console.log("Neo...wake up");
-	console.log("A small matrix to place your wall?")
+	console.log("A small matrix to place your wall?");
 	console.log("Use <number>,<number> to enter your selection");
 
 	// set up the game
