@@ -38,7 +38,8 @@ function RulesEngine() {
 			console.log("This is a moveSquare");
 		} else {
 			console.log("this is a wallSquare part");
-		};
+	}
+};
 
 	/*********
 	 * To Dos
